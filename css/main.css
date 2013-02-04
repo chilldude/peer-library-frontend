@@ -78,7 +78,7 @@ p {
 /* ! Layout for desktop version   */
 /* ============================== */
 
-/* top bar */
+/* header */
 header {
 	position: relative;
 	height: 60px;
@@ -87,20 +87,34 @@ header {
 
 header .logo {
 	position: relative;
-	top: 10px;
+	top: 20px;
 	height: 55px;
 }
 
 header .logo img {
-	width: 200px;
-	height: auto;
+	height: 26px;
+	width: auto;
 }
 
 /* main container */
 .content {
 	position: relative;
-	top: 20px;
 	margin-bottom: 30px;
+}
+
+/* topbar */
+.topbar {
+	margin: 20px 0;
+}
+
+.topbar a {
+	margin-right: 20px;
+	padding: 5px 20px;
+	text-decoration: none;
+}
+
+.topbar a:hover, .topbar a.active {
+	border-bottom: 1px solid #b3b3b3;
 }
 
 /* sidebar */
@@ -112,10 +126,13 @@ ol.item-list {
 ol.item-list li {
 	list-style-type:none;
 	padding: 20px 0;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
 }
 
 ol.item-list li:hover {
-	background: #f8f8f8;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
 }
 
 ol.item-list .item-content {
