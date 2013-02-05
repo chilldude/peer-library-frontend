@@ -233,6 +233,23 @@ ol.item-list .abstract {
     padding-right: 24px;
 }
 
+/* viewer */
+
+.viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.viewer iframe {
+    width: 100%;
+    height: 100%;
+}
+
 /* sidebar > subject list */
 ul.field-list {
 	list-style-type: none;

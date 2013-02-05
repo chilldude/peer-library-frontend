@@ -25,12 +25,6 @@ $(document).ready(function(){
 		}
 	});
 
-	$(document).keyup(function(event) {
-		if (event.keyCode == 27) { // esc
-			searchOff();
-		}
-	});
-
 	$(document).keypress(function(event) {
 		if (!searchActive) {
 			var char = String.fromCharCode(event.which);
@@ -38,5 +32,31 @@ $(document).ready(function(){
 				searchOn();
 			}
 		}
-	});	
+	});
+
+	// viewer
+	var viewerActive = false;
+
+	function viewerOn() {
+		$('.viewer').fadeIn('fast');
+		viewerActive = true;
+	}
+
+	function viewerOff() {
+		$('.viewer').fadeOut('fast');
+		viewerActive = false;
+	}
+
+	$('.viewer-link').click(function(){
+		viewerOn();
+	});
+
+	// escape
+	$(document).keyup(function(event) {
+		if (event.which == 27) {
+			searchOff();
+			viewerOff();
+		}
+	});
+
 });
