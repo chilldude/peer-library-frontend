@@ -1,15 +1,15 @@
 $(document).ready(function(){
-	/* search */
+	// search
 	var searchActive = false;
 
 	function searchOn() {
-		$('.search').show();
+		$('.search').fadeIn('fast');
 		$('.search-input').focus();
 		searchActive = true;
 	}
 
 	function searchOff() {
-		$('.search').hide();
+		$('.search').fadeOut('fast');
 		$('.search-input').blur();
 		$('.search-input').val('');
 		searchActive = false;
@@ -33,11 +33,10 @@ $(document).ready(function(){
 
 	$(document).keypress(function(event) {
 		if (!searchActive) {
-			var char = String.fromCharCode(event.keyCode);
+			var char = String.fromCharCode(event.which);
 			if (char.match(/\w/)) {
 				searchOn();
 			}
 		}
-	});
-
+	});	
 });

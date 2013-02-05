@@ -81,6 +81,7 @@ p {
 /* header */
 header {
 	position: relative;
+	background: white;
 	height: 60px;
 	border-bottom: 1px solid #dee7e9;
 }
@@ -98,15 +99,20 @@ header .logo img {
 	width: auto;
 }
 
-header .auth {
+header .menu {
 	float: right;
 	display: block;
 	position: relative;
 	top: 22px;
 }
 
-header .auth a {
+header .menu a {
 	font-weight: 300;
+}
+
+header .menu a.search-link {
+	margin-right: 20px;
+	text-decoration: none;
 }
 
 /* main container */
@@ -130,11 +136,6 @@ header .auth a {
 	border-bottom: 1px solid #b3b3b3;
 }
 
-/* sidebar */
-ul.fields-list {
-	
-}
-
 /* journal list */
 ol.item-list {
 }
@@ -156,6 +157,10 @@ ol.item-list .item-content {
 	float: left;
 }
 
+ol.item-list .item-content i {
+	font-size: 0.7em;
+}
+
 ol.item-list .item-content h4 a {
 	color: black;
 }
@@ -166,6 +171,10 @@ ol.item-list span.stats {
 	font-weight: 300;
 }
 
+ol.item-list span.stats span {
+	margin-left: 10px;
+}
+
 ol.item-list .item-content h4.title {
 	margin-bottom: 10px;
 }
@@ -174,7 +183,6 @@ ol.item-list .abstract {
 	display: none;
 	padding: 20px;
 }
-
 
 /* search */
 .search {
@@ -211,7 +219,7 @@ ol.item-list .abstract {
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    border-bottom: 1px solid #87939c;
+    border-bottom: 1px solid #b8c1c7;
     background: none;
     width: 90%;
 }
@@ -225,6 +233,30 @@ ol.item-list .abstract {
     padding-right: 24px;
 }
 
+/* sidebar > subject list */
+ul.field-list {
+	list-style-type: none;
+}
+
+ul.field-list li ul.subject-list {
+	padding-left: 10px;
+	margin: 10px;
+	list-style-type: none;
+	border-left: 1px solid #b8c1c7;
+	display: none;
+}
+
+/* footer */
+footer {
+	height: 35px;
+	padding-top: 15px;
+	background: rgba(0,0,0,0.9);
+	color: white;
+	vertical-align: center;
+	text-align: center;
+	font-weight: 300;
+}
+
 /* ============================= */
 /* ! Layout for mobile version   */
 /* ============================= */
@@ -234,7 +266,14 @@ ol.item-list .abstract {
 	body {
 		
 	}
-
+	ol.item-list span.stats {
+		float: left;
+	}
+	
+	ol.item-list span.stats span {
+		margin: 0 10px 0 0;
+	}
+	
 }
 
 
