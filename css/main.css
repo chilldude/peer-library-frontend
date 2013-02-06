@@ -74,6 +74,82 @@ p {
 	line-height: 2.5em;
 }
 
+::-webkit-input-placeholder { font-family: 'Source Sans Pro', sans-serif; }
+::-moz-placeholder { font-family: 'Source Sans Pro', sans-serif; } /* firefox 19+ */
+:-ms-input-placeholder { font-family: 'Source Sans Pro', sans-serif; } /* ie */
+input:-moz-placeholder { font-family: 'Source Sans Pro', sans-serif; }
+input { font-family: 'Source Sans Pro', sans-serif; }
+
+/* ===============================
+		Register / Sign up
+		============================*/
+
+.auth-wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+}
+
+.auth-header {
+	width: 330px;
+	height: 70px;
+	padding-top: 110px;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 1px solid #dee7e9;
+}
+
+.auth-header img.logo {
+	width: 200px;
+	height: auto;
+}
+
+.form-container {
+	width: 330px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.form-container h2 {
+	font-size: 1.1em;
+	padding: 20px;
+}
+
+.form-container form {
+	
+}
+
+.form-container form input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #dee7e9;
+	border-width: 0 0 1px 0;
+	font-size: 1.2em;
+	font-weight: 300;
+	margin: 10px 0;
+}
+
+.form-container form input:focus {
+	outline: none;
+	border: 1px solid #bcc7ca;
+	border-width: 0 0 1px 0;
+	border: 1px solid #dee7e9;
+	border-width: 0 0 1px 0;
+}
+
+.form-container form label {
+	display: none;
+}
+
+.form-container form span.institution {
+	font-size: 0.9em;
+	display: block;
+	margin-bottom: 10px;
+	display: none;
+}
+
 /* ============================== */
 /* ! Layout for desktop version   */
 /* ============================== */
@@ -215,7 +291,6 @@ ol.item-list .abstract {
 
 .search-input {
     font-size: 48px;
-    font-family: 'Source Sans Pro', sans-serif;
     border-top: 0;
     border-right: 0;
     border-left: 0;
