@@ -25,10 +25,10 @@ $(document).ready(function(){
 		}
 	});
 
-	$(document).keypress(function(event) {
+	$(document).keydown(function(event) {
 		if (!searchActive) {
 			var char = String.fromCharCode(event.which);
-			if (char.match(/\w/)) {
+			if (char.match(/\w/) && !event.ctrlKey) {
 				searchOn();
 			}
 		}
