@@ -41,7 +41,7 @@
 								<input type="text" value="" name="email" id="email" placeholder="*.edu email address">
 							</span>
 						</p>
-						<p><span class="institution">Ahh! University of California, Berkeley</span></p>
+						<p><span class="institution"></span></p>
 						<p>
 							<span>
 								<label for="name-first">Last Name</label>
@@ -74,16 +74,28 @@
 						//autofocus first input
 						$("input[type='text']:first", document.forms[0]).focus();
 						
+						// *.edu email validation
+						function validateEmail(email) { 
+						    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+edu$/;
+						    return re.test(email);
+						}
+						
 						//detect school
 						$("#email").blur(function(){
-							var $this = $(this).val();
-							var url = $this.replace(/.*@/, "");
-							$.ajax({
-							      url: "http://textance.herokuapp.com/title/" + url,
-							      complete: function(data) {
-							        $('.institution').fadeIn().text('Ahh! ' + data.responseText);
-							      }
-							});
+							var email = $(this).val();
+							if (validateEmail(email)) {
+								var url = email.replace(/.*@/, "");
+								$.ajax({
+								      url: "http://textance.herokuapp.com/title/" + url,
+								      complete: function(data) {
+								        $('.institution').fadeIn().text('Ahh! ' + data.responseText);
+								      }
+								});
+							} else {
+								$('.form-container h2').fadeOut('fast',function(){
+									$(this).fadeIn('fast').text('Please enter a valid .edu email address').css('color','#d14');
+								});
+							}
 						});
 					});
 				</script>
