@@ -150,6 +150,21 @@ input { font-family: 'Source Sans Pro', sans-serif; }
 	display: none;
 }
 
+.form-container form input[type="submit"] {
+	font-size: 1em;
+	font-weight: 400;
+	height: 36px;
+	background: #2884da;
+	color: white;
+	border: 1px solid #1d5b95;
+	
+	border-radius: 2px;
+}
+
+.form-container form input[type="submit"]:hover {
+	background: #1b63a5;
+}
+
 /* ============================== */
 /* ! Layout for desktop version   */
 /* ============================== */
