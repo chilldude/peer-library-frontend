@@ -4,19 +4,19 @@ $(document).ready(function(){
 
 	function searchOn() {
 		searchActive = true;
-		$('.search').fadeIn(500);
+		$('.search').fadeIn(250);
 		$('.search-input').focus();
 
-		$('#home .search-input').animate({width: '1000px'}, 500);
+		$('.search-input').animate({width: '1000px'}, 250);
 	}
 
 	function searchOff() {
 		searchActive = false;
-		$('.search').fadeOut(500);
+		$('.search').fadeOut(250);
 		$('.search-input').blur();
 		$('.search-input').val('');
 
-		$('#home .search-input').animate({width: '630px'}, 500);
+		$('.search-input').animate({width: '630px'}, 250);
 	}
 
 	$('.search-link').click(function(){
