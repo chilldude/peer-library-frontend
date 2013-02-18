@@ -210,6 +210,13 @@ header {
 	background: rgba(255,255,255,0.5);
 	height: 60px;
 	border-bottom: 1px solid #dee7e9;
+	width: 100%;
+}
+
+/* header temporary style hack */
+header .header-wrap {
+	height: 60px;
+	border-bottom: 1px solid #dee7e9;
 }
 
 header .logo {
