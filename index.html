@@ -38,42 +38,24 @@
 						</div>
 					</div>
 				</header>
+				<section class="container_12 wrap">
+					<div class="grid_12 search-bar" style="z-index:9999;">
+						<i class="search-icon icon-search icon-3x"></i>
+						<input class="search-input" type="text" placeholder="Search 1,349,291 academic articles" />
+					</div>
+				</section>
+				<div class="search">
+					<section class="container_12 wrap">
+						<div class="grid_12">
+							<div class="logo"><a href="#"><img src="img/logo.png"></a></div>
+						</div>
+					</section>
+				</div>
 				
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-				<!-- test scripts -->
-				<script type="text/javascript">
-					$(document).ready(function(){
-						//autofocus first input
-						$("input[type='text']:first", document.forms[0]).focus();
-						
-						// *.edu email validation
-						function validateEmail(email) { 
-						    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+edu$/;
-						    return re.test(email);
-						}
-						
-						//detect school
-						$("#email").blur(function(){
-							var email = $(this).val();
-							if (validateEmail(email)) {
-								var url = email.replace(/.*@/, "");
-								$.ajax({
-								      url: "http://textance.herokuapp.com/title/" + url,
-								      complete: function(data) {
-								        $('.institution').fadeIn().text('Ahh! ' + data.responseText);
-								      }
-								});
-							} else {
-								$('.form-container h2').fadeOut('fast',function(){
-									$(this).fadeIn('fast').text('Please enter a valid .edu email address').css('color','#d14');
-								});
-							}
-						});
-					});
-				</script>
     </body>
 </html>

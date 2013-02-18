@@ -3,16 +3,20 @@ $(document).ready(function(){
 	var searchActive = false;
 
 	function searchOn() {
-		$('.search').fadeIn('fast');
-		$('.search-input').focus();
 		searchActive = true;
+		$('.search').fadeIn(500);
+		$('.search-input').focus();
+
+		$('#home .search-input').animate({width: '1000px'}, 500);
 	}
 
 	function searchOff() {
-		$('.search').fadeOut('fast');
+		searchActive = false;
+		$('.search').fadeOut(500);
 		$('.search-input').blur();
 		$('.search-input').val('');
-		searchActive = false;
+
+		$('#home .search-input').animate({width: '630px'}, 500);
 	}
 
 	$('.search-link').click(function(){
@@ -32,6 +36,10 @@ $(document).ready(function(){
 				searchOn();
 			}
 		}
+	});
+
+	$('#home .search-input').click(function() {
+		searchOn();
 	});
 
 	// viewer
