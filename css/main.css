@@ -84,6 +84,24 @@ h4 {
 input:-moz-placeholder { font-family: 'Source Sans Pro', sans-serif; }
 input { font-family: 'Source Sans Pro', sans-serif; }
 
+/* =============================
+		ghp
+	=============================*/
+
+body#home {
+	min-height: 600px;
+	height: auto;
+	position: relative;
+	
+  background: url('../img/graph_bg.jpg') no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"
+}
+
 /* ===============================
 		Register / Sign up
 		============================*/
@@ -158,15 +176,28 @@ input { font-family: 'Source Sans Pro', sans-serif; }
 	font-size: 1em;
 	font-weight: 400;
 	height: 36px;
+	line-height: 30px;
 	background: #2884da;
 	color: white;
 	border: 1px solid #1d5b95;
 	
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	border-radius: 2px;
+	
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	transition: 0.2s;
 }
 
 .form-container form input[type="submit"]:hover {
-	background: #1b63a5;
+	background: #277bc9;
+}
+
+.form-container form input[type="submit"]:active {	
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
 }
 
 /* ============================== */
@@ -176,7 +207,7 @@ input { font-family: 'Source Sans Pro', sans-serif; }
 /* header */
 header {
 	position: relative;
-	background: white;
+	background: rgba(255,255,255,0.5);
 	height: 60px;
 	border-bottom: 1px solid #dee7e9;
 }
@@ -290,6 +321,7 @@ ol.item-list .abstract, .article-summary .abstract {
 /* comment list */
 ol.comment-list {
     margin-bottom: 10px;
+		padding: 0;
 }
 
 ol.comment-list li {
