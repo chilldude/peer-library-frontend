@@ -355,22 +355,22 @@ ol.item-list .abstract, .article-summary .abstract {
 }
 
 .review-verdict i {
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
-.review-verdict.plus-plus {
+.review-verdict i.plus-plus {
     color: #00d679;
 }
 
-.review-verdict.plus {
+.review-verdict i.plus {
     color: #bcffe2;
 }
 
-.review-verdict.minus {
+.review-verdict i.minus {
     color: #f4c9de;
 }
 
-.review-verdict.minus-minus {
+.review-verdict i.minus-minus {
     color: #e02581;
 }
 
