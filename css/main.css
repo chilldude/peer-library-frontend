@@ -324,6 +324,67 @@ ol.item-list .abstract, .article-summary .abstract {
     padding: 20px;
 }
 
+/* review list */
+.review-list {
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.review-list li {
+    list-style-type:none;
+    padding: 20px 0;
+}
+
+.review-item {
+    border: 1px solid #dee7e9;
+    padding: 20px 20px;
+}
+
+.review-author {
+    float: left;
+    width: 70%;
+}
+
+.review-author h3.name {
+    line-height: 2em;
+    margin: 0;
+}
+
+.review-verdict {
+    float: right;
+}
+
+.review-verdict i {
+    padding-left: 10px;
+}
+
+.review-verdict.plus-plus {
+    color: #00d679;
+}
+
+.review-verdict.plus {
+    color: #bcffe2;
+}
+
+.review-verdict.minus {
+    color: #f4c9de;
+}
+
+.review-verdict.minus-minus {
+    color: #e02581;
+}
+
+
+.review-text {
+    clear: both;
+}
+
+.review-text p {
+    line-height: 2em;
+    padding: 20px 0 10px 0;
+    margin: 0;
+}
+
 
 /* comment list */
 ol.comment-list {
@@ -335,7 +396,6 @@ ol.comment-list li {
     list-style-type:none;
     padding-top: 20px;
 }
-
 
 ol.comment-list .comment-info {
     padding-bottom: 5px;
