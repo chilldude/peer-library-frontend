@@ -402,6 +402,7 @@ ol.comment-list .comment-content p {
     position: relative;
     top: 30%;
     width:100%;
+    text-align: center;
 }
 
 .search-input {
@@ -411,11 +412,28 @@ ol.comment-list .comment-content p {
     border-left: 0;
     border-bottom: 1px solid #b8c1c7;
     background: none;
-    width: 90%;
+    width: 630px;
 }
 
 .search-input:focus {
     outline: none;
+}
+
+.search-input::-webkit-input-placeholder {
+    font-size: 36px;
+    position: relative;
+    top: 10px;
+}
+.search-input::-moz-placeholder {
+    font-size: 36px;
+    position: relative;
+    top: 10px;
+}
+
+.search-input::-ms-input-placeholder {
+    font-size: 36px;
+    position: relative;
+    top: 10px;
 }
 
 .search-icon {
@@ -484,32 +502,15 @@ footer .oa_logo img {
 
 /* home */
 
+#home .wrap {
+    height: 100%;
+}
+
 #home .search-bar {
     position: absolute;
     top: 50%;
     width:1120px;
     text-align: center;
-}
-
-#home .search-input {
-    width: 630px;
-}
-
-#home .search-input::-webkit-input-placeholder {
-    font-size: 36px;
-    position: relative;
-    top: 10px;
-}
-#home .search-input::-moz-placeholder {
-    font-size: 36px;
-    position: relative;
-    top: 10px;
-}
-
-#home .search-input::-ms-input-placeholder {
-    font-size: 36px;
-    position: relative;
-    top: 10px;
 }
 
 
