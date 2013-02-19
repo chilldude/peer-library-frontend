@@ -236,16 +236,49 @@ header .menu {
 	float: right;
 	display: block;
 	position: relative;
-	top: 22px;
+	top: 0px;
 }
 
-header .menu a {
+header .menu ul.nav {
+	position: relative;
+	left: 0;
+	display: block;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header .menu ul.nav li {
+	float: left;
+	display: block;
+}
+
+header .menu ul.nav li a {
+	text-align: center;
 	font-weight: 300;
+	text-decoration: none;
+	display: inline-block;
+	width: 106px;
+	height: 39px;
+	padding-top: 21px;
+	text-shadow: none;
+	border-left: 1px solid #dee7e9;
+	
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-ms-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
 }
 
-header .menu a.search-link {
-	margin-right: 20px;
-	text-decoration: none;
+header .menu ul.nav li a.last {
+	border-right: 1px solid #dee7e9;
+}
+
+header .menu ul.nav li a:hover {
+	color: #6f7477;
+	background: #eff5f7;
 }
 
 /* main container */
@@ -257,44 +290,65 @@ header .menu a.search-link {
 /* topbar */
 .topbar {
 	margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .topbar a {
+	text-align: center;
 	margin-right: 20px;
 	padding: 5px 20px;
+	min-width: 70px;
 	text-decoration: none;
+	display: block;
+	float: left;
 }
 
-.topbar a:hover, .topbar a.active {
-	border-bottom: 1px solid #b3b3b3;
+.topbar a hr {
+	width: 22px;
+	margin: 4px auto 0 auto;
+	
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-ms-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.topbar a:hover hr, .topbar a.active hr {
+	width: 70px;
+	border-color: #6f7477;
 }
 
 /* article summary */
 .article-summary {
-    padding: 20px 0;
+	padding: 20px 0;
 }
 
 /* journal list */
 ol.item-list {
-    padding: 0;
+	padding: 0;
 }
 
 ol.item-list li {
-    list-style-type:none;
-    padding: 20px 0;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+	list-style-type:none;
+	padding: 20px 0;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+		
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-ms-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
 }
 
 ol.item-list li:hover {
-    border-top: 1px solid #e3e3e3;
-    border-bottom: 1px solid #e3e3e3;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
 }
 
 ol.item-list .item-content, .article-summary-data {
-    width: 85%;
-    float: left;
+	width: 85%;
+	float: left;
 }
 
 ol.item-list .item-content i, .article-summary-data i {
