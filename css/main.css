@@ -346,8 +346,7 @@ ol.item-list .abstract, .article-summary .abstract {
 }
 
 .review-author h3.name {
-    line-height: 2em;
-    margin: 0;
+    margin: 0 0 5px 0;
 }
 
 .review-verdict {
@@ -381,7 +380,7 @@ ol.item-list .abstract, .article-summary .abstract {
 
 .review-text p {
     line-height: 2em;
-    padding: 20px 0 10px 0;
+    padding: 20px 0 0 0;
     margin: 0;
 }
 
